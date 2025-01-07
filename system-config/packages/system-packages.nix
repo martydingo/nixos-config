@@ -1,10 +1,11 @@
 { inputs, pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
-    nixpkgs-fmt
     desktop-file-utils
-    vim
-    kitty
     git
+    kitty
+    python313
+    nixpkgs-fmt
+    vim
   ];
 }
