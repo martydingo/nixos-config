@@ -1,1 +1,2 @@
 flake.lock
+service-config/services/guacamole/user-mapping.xml
