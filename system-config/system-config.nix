@@ -1,6 +1,7 @@
 { ... }:
 {
   imports = [
+    ./environment.nix
     ./configs/time.nix
     ./configs/locale.nix
     ./configs/nix.nix
