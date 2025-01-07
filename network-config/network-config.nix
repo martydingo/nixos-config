@@ -1,13 +1,13 @@
 { ... }:
 {
   networking = {
-    bridges = {
-      br0 = {
-        interfaces = [
-          "eno1"
-        ];
-      };
-    };
+    # bridges = {
+    #   br0 = {
+    #     interfaces = [
+    #       "eno1"
+    #     ];
+    #   };
+    # };
 
     networkmanager = {
       enable = true;
