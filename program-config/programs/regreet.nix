@@ -1,4 +1,4 @@
-{ input, pkgs, ... }:
+{ inputs, pkgs, ... }:
 {
   programs.regreet = {
     enable = true;
