@@ -25,5 +25,4 @@
       HYPRCURSOR_SIZE = "32";
     };
   };
-};
 }
