@@ -27,4 +27,4 @@
   system.stateVersion = "24.11";
 }
 
-  edid_firmware=HDMI-A-1:edid/evanlak8k.bin
+# edid_firmware=HDMI-A-1:edid/evanlak8k.bin
