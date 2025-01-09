@@ -12,6 +12,10 @@
       ./program-config/program-config.nix
     ];
 
+  hardware.display.edid = {
+    enable = true;
+  };
+
   system.stateVersion = "24.11";
 }
 
