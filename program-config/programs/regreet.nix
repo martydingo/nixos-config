@@ -16,7 +16,7 @@
       package = inputs.nixpkgs-unstable.outputs.legacyPackages.${pkgs.stdenv.hostPlatform.system}.gruvbox-plus-icons;
     };
     settings = {
-      background.path = "/home/marty/Pictures/Wallpapers/5120x1440wallpaper_51202149947_o.png";
+      background.path = "/var/5120x1440wallpaper_51202149947_o.png";
       env = {
         XCURSOR_THEME = "Capitaine Cursors (Gruvbox)";
         XCURSOR_SIZE = "32";
