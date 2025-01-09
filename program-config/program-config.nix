@@ -1,6 +1,7 @@
 { ... }:
 {
   imports = [
+    ./programs/regreet.nix
     ./programs/hyprland.nix
     ./programs/steam.nix
   ];
