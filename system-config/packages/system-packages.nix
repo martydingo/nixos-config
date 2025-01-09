@@ -7,6 +7,6 @@
     python313
     nixpkgs-fmt
     vim
-    nm-tray
+    networkmanagerapplet
   ];
 }
