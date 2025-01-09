@@ -17,7 +17,7 @@
     packages = [
       (pkgs.runCommand "evanlak8k" { } ''
         mkdir -p "$out/lib/firmware/edid"
-        base64 -d > "$out/lib/firmware/edid/custom1.bin" <<'EOF'
+        base64 -d > "$out/lib/firmware/edid/evanlak8k.bin" <<'EOF'
         AP///////wAkZIx1AQAAAC0gAQOAPyR4KuoVrFBFnyYOUFS/74DRwIHAlQCBgKnAswABAQEBCOgAMPJwWoCwWIoAeGghAAAe53xwoNCgKVAwIDoAIE8xAAAaAAAA/QAelh6gjAAKICAgICAgAAAA/ABFdmFubGFrOEsgVjEKAtMCA2DyUiAiHxBAP11fYGF1dmJkZWba2yMJBweDAQAA4wXjAWwDDAAgADj/IABAAQJt2F3EAf/AMwswlsM0DG0aAAACATCW5gAAAAAA4w8YfOYGBwFgYCfiANXlDsR+ZttwwgCgoKBVUDAgNQB4aCEAAB4AAAAAAAAAAAAAAAAArg==
         EOF
       '')
@@ -27,3 +27,4 @@
   system.stateVersion = "24.11";
 }
 
+  edid_firmware=HDMI-A-1:edid/evanlak8k.bin
