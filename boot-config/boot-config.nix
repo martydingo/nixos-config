@@ -11,6 +11,7 @@
         "10de:2684" # Graphics
         "10de:22ba" # Audio
       ])
+      "drm.edid_firmware=HDMI-A-1:edid/evanlak8k.bin"
     ];
 
     loader = {
