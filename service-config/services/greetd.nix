@@ -36,5 +36,7 @@ in
         command = "${pkgs.hyprland}/bin/Hyprland --config ${hyprlandConfig}";
       };
     };
+
   };
+  security.pam.services.greetd.enableGnomeKeyring = true;
 }
