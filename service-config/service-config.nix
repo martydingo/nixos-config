@@ -6,5 +6,6 @@
     ./services/gnome-keyring.nix
     ./services/guacamole/guacamole-server.nix
     ./services/guacamole/guacamole-client.nix
+    ./services/squeezelite.nix
   ];
 }
