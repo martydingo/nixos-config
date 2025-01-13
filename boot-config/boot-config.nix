@@ -22,7 +22,7 @@
     };
 
     zfs.extraPools = [ "os" ];
-
+    kernel.sysctl."vm.swappiness" = 0;
     supportedFilesystems = [ "zfs" ];
     kernelModules = [ ];
     extraModulePackages = [ ];
