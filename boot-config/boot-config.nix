@@ -10,6 +10,7 @@
       ("vfio-pci.ids=" + lib.concatStringsSep "," [
         "10de:2684" # Graphics
         "10de:22ba" # Audio
+        "14c3:0608" # WiFi / Bluetooth (Untested)
       ])
       "drm.edid_firmware=HDMI-A-1:edid/evanlak8k.bin"
     ];
