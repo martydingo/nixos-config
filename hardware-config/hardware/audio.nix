@@ -5,6 +5,7 @@
     enable = true;
     pulse.enable = true;
     alsa.enable = true;
+    jack.enable = true;
     systemWide = true;
     extraConfig = {
       pipewire = {
