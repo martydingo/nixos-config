@@ -12,7 +12,7 @@
       pipewire = {
         "10-clock-rate" = {
           "context.properties" = {
-            "default.clock.rate" = 192000;
+            "default.clock.rate" = 96000;
             "audio.format" = "S32LE";
           };
           "91-null-sinks" = {
