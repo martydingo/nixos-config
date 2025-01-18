@@ -91,6 +91,8 @@
       fsType = "zfs";
     };
 
+  fileSystems.gvfs.enable = true;
+
   swapDevices = [ ];
 
   zramSwap = {
