@@ -91,7 +91,7 @@
       fsType = "zfs";
     };
 
-  fileSystems.gvfs.enable = true;
+  # fileSystems.gvfs.enable = true;
 
   swapDevices = [ ];
 
