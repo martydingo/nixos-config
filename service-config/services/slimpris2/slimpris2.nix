@@ -6,7 +6,7 @@
     # environment = {
     # };
     serviceConfig = {
-      ExecStart = "${(pkgs.callPackage ./packages/slimpris2.nix { })}/bin/slimpris2 NAS 9000 \"Office PC\"";
+      ExecStart = "${(pkgs.callPackage ./package.nix { })}/bin/slimpris2 NAS 9000 \"Office PC\"";
       Restart = "always";
       Type = "simple";
     };
