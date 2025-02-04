@@ -4,100 +4,87 @@
 { config, lib, pkgs, modulesPath, ... }:
 
 {
-  imports =
-    [
-      (modulesPath + "/installer/scan/not-detected.nix")
-      ./hardware/amd_gpu.nix
-      ./hardware/audio.nix
-      ./hardware/graphics.nix
-    ];
+  imports = [
+    (modulesPath + "/installer/scan/not-detected.nix")
+    ./hardware/amd_gpu.nix
+    ./hardware/audio.nix
+    ./hardware/graphics.nix
+    ./hardware/i2c.nix
+  ];
 
-  fileSystems."/" =
-    {
-      device = "os/v1/root";
-      fsType = "zfs";
-    };
+  fileSystems."/" = {
+    device = "os/v1/root";
+    fsType = "zfs";
+  };
 
-  fileSystems."/boot" =
-    {
-      device = "/dev/disk/by-uuid/12CE-A600";
-      fsType = "vfat";
-      options = [ "fmask=0022" "dmask=0022" ];
-    };
+  fileSystems."/boot" = {
+    device = "/dev/disk/by-uuid/12CE-A600";
+    fsType = "vfat";
+    options = [ "fmask=0022" "dmask=0022" ];
+  };
 
-  fileSystems."/srv" =
-    {
-      device = "os/v1/root/srv";
-      fsType = "zfs";
-    };
+  fileSystems."/srv" = {
+    device = "os/v1/root/srv";
+    fsType = "zfs";
+  };
 
-  fileSystems."/root" =
-    {
-      device = "os/v1/root/root";
-      fsType = "zfs";
-    };
+  fileSystems."/root" = {
+    device = "os/v1/root/root";
+    fsType = "zfs";
+  };
 
-  fileSystems."/usr" =
-    {
-      device = "os/v1/root/usr";
-      fsType = "zfs";
-    };
+  fileSystems."/usr" = {
+    device = "os/v1/root/usr";
+    fsType = "zfs";
+  };
 
-  fileSystems."/opt" =
-    {
-      device = "os/v1/root/opt";
-      fsType = "zfs";
-    };
+  fileSystems."/opt" = {
+    device = "os/v1/root/opt";
+    fsType = "zfs";
+  };
 
-  fileSystems."/var/lib/libvirt" =
-    {
-      device = "os/v1/root/var/lib/libvirt";
-      fsType = "zfs";
-    };
+  fileSystems."/var/lib/libvirt" = {
+    device = "os/v1/root/var/lib/libvirt";
+    fsType = "zfs";
+  };
 
-  fileSystems."/lib64" =
-    {
-      device = "os/v1/root/lib64";
-      fsType = "zfs";
-    };
+  fileSystems."/lib64" = {
+    device = "os/v1/root/lib64";
+    fsType = "zfs";
+  };
 
-  fileSystems."/home/marty" =
-    {
-      device = "os/v1/root/home/marty";
-      fsType = "zfs";
-    };
+  fileSystems."/home/marty" = {
+    device = "os/v1/root/home/marty";
+    fsType = "zfs";
+  };
 
-  fileSystems."/var/log" =
-    {
-      device = "os/v1/root/var/log";
-      fsType = "zfs";
-    };
+  fileSystems."/var/log" = {
+    device = "os/v1/root/var/log";
+    fsType = "zfs";
+  };
 
-  fileSystems."/nix/store" =
-    {
-      device = "os/v1/root/nix/store";
-      fsType = "zfs";
-    };
+  fileSystems."/nix/store" = {
+    device = "os/v1/root/nix/store";
+    fsType = "zfs";
+  };
 
-  fileSystems."/etc/nixos" =
-    {
-      device = "os/v1/root/etc/nixos";
-      fsType = "zfs";
-    };
+  fileSystems."/etc/nixos" = {
+    device = "os/v1/root/etc/nixos";
+    fsType = "zfs";
+  };
 
-  fileSystems."/var/cache" =
-    {
-      device = "os/v1/root/var/cache";
-      fsType = "zfs";
-    };
+  fileSystems."/var/cache" = {
+    device = "os/v1/root/var/cache";
+    fsType = "zfs";
+  };
 
   # fileSystems.gvfs.enable = true;
 
   swapDevices = [ ];
 
-  zramSwap = {
-    enable = true;
-  };
+  # zramSwap = {
+  #   enable = true;
+  # };
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
   # (the default) this is the recommended approach. When using systemd-networkd it's
   # still possible to use this option, but it's recommended to use it in conjunction
@@ -112,5 +99,6 @@
   # networking.interfaces.wlp100s0.useDHCP = lib.mkDefault true;
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
-  hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+  hardware.cpu.amd.updateMicrocode =
+    lib.mkDefault config.hardware.enableRedistributableFirmware;
 }
