@@ -5,6 +5,10 @@
   ];
 
   virtualisation = {
+    docker = {
+      enable = true;
+      enableOnBoot = false;
+    };
     kvmfr = {
       enable = true;
 

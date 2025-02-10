@@ -1081,6 +1081,7 @@
       SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1e71", ATTRS{idProduct}=="2010", TAG+="uaccess", TAG+="NZXT_RGB__Fan_Controller"
       SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1e71", ATTRS{idProduct}=="200e", TAG+="uaccess", TAG+="NZXT_RGB__Fan_Controller"
       SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1e71", ATTRS{idProduct}=="2011", TAG+="uaccess", TAG+="NZXT_RGB__Fan_Controller"
+      SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1e71", ATTRS{idProduct}=="201f", TAG+="uaccess", TAG+="NZXT_RGB__Fan_Controller"
       #---------------------------------------------------------------#
       # NZXT Hue+ - DetectNZXTHuePlusControllers
       #---------------------------------------------------------------#
