@@ -1,5 +1,4 @@
-{ ... }:
-{
+{ ... }: {
   imports = [
     ./services/openssh.nix
     ./services/greetd.nix
@@ -10,5 +9,6 @@
     ./services/gvfs.nix
     ./services/udev.nix
     ./services/squeezelite.nix
+    ./services/printer.nix
   ];
 }
